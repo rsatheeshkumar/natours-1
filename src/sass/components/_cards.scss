@@ -10,7 +10,7 @@ $color-tertiary-light: #2998ff;
 $color-tertiary-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
-
+$color-grey-light-2: #eee;
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
@@ -27,10 +27,11 @@ $gutter-horizontal: 6rem;
   perspective: 150rem;
   -moz-Perspective:150rem;
   position: relative;
-  height:50rem;
+  height:52rem;
+  // margin-top:2rem;
 
   &__side{
-    height:50rem;
+    height:52rem;
     Transition:all .8s ease;
     position: absolute;
     top:0;
@@ -50,8 +51,20 @@ $gutter-horizontal: 6rem;
     transform: rotateY(180deg);
 
   &-1{
-    background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+    background-image:linear-gradient(to right bottom,
+     $color-secondary-light,
+     $color-secondary-dark);
     }
+    &-2{
+      background-image:linear-gradient(to right bottom,
+       $color-primary-light,
+       $color-primary-dark);
+      }
+      &-3{
+        background-image:linear-gradient(to right bottom,
+         $color-tertiary-light,
+         $color-tertiary-dark);
+        }
   }
   }
  
@@ -71,21 +84,26 @@ transform: rotateY(-180deg);
       background-blend-mode: screen;
      -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%); 
       clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 3px;
       // -moz-background-blend-mode:screen;
         &--1{
         background-image:linear-gradient(to right bottom,
          $color-secondary-light,
          $color-secondary-dark), 
-         url(https://i.imgur.com/vmJ2lEN.jpg);
+         url(https://avatars3.githubusercontent.com/u/57618965?s=460&v=4);
 
         }
+
         &--2{
-          background-image: url(https://i.imgur.com/vmJ2lEN.jpg);
-  
+          background-image:linear-gradient(to right bottom,
+          $color-primary-light,
+          $color-primary-dark), url(https://i.imgur.com/nHcmqz1.jpg);
           }
+
           &--3{
-            background-image: url(https://i.imgur.com/vmJ2lEN.jpg);
-    
+            background-image:linear-gradient(to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark), url(https://i.imgur.com/WqTZk3c.jpg);
             }
       }
       &__heading{
@@ -96,12 +114,75 @@ transform: rotateY(-180deg);
       position:absolute;
       top:12rem;
       right:2rem;
+      width:72%;
       }
+
       &__heading-span{
+        padding:1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
 
-&--1{
-  
-}
+      &--1{
+        background-image:linear-gradient(to right bottom,
+        rgba($color-secondary-light, .8), 
+        rgba($color-secondary-dark, .8));
 
       }
+      &--2{
+        background-image:linear-gradient(to right bottom,
+        rgba($color-primary-light, .8), 
+        rgba($color-primary-dark, .8));
+
+      }
+      &--3{
+        background-image:linear-gradient(to right bottom,
+        rgba($color-tertiary-light, .8), 
+        rgba($color-tertiary-dark, .8));
+
+      }
+
+   }
+   &__details{
+    padding:3rem;
+
+   }
+
+  ul{
+    list-style-type:none;
+    width:80%;
+    margin:0 auto;
+
+      li{
+        text-align:center;
+     font-size:1.5rem;
+        padding:1rem;
+        }
+     li:not(:last-child){
+       border-bottom:1px solid $color-grey-light-2;
+     }
+
+   }
+   &__cta{
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%, -50%);
+   }
+   &__price-box{
+    text-align:center;
+    color:$color-white;
+    margin-bottom:8rem; 
+    
+   }
+   &__price-only{
+    font-size:1.4rem;
+    text-transform:uppercase;
+
+   }
+   &__price-value{
+     font-size:6rem;
+     font-weight:100r;
+
+
+  }
 }

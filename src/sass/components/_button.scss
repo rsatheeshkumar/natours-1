@@ -61,6 +61,12 @@ $gutter-horizontal: 6rem;
       background-color: $color-white;
     }
   }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary;
+    }
 
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
@@ -88,4 +94,4 @@ $gutter-horizontal: 6rem;
     box-shadow: 0 .2rem 1rem rgba($color-black, 0.15);
     transform: translateY(0px);
   }
-}
+}}
