@@ -1,0 +1,107 @@
+//colors
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+//font
+$default-font-size: 1.6rem;
+//grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+
+.card{
+//functionality
+  perspective: 150rem;
+  -moz-Perspective:150rem;
+  position: relative;
+  height:50rem;
+
+  &__side{
+    height:50rem;
+    Transition:all .8s ease;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15)
+    
+    &--front{
+      background-color: $color-white;
+
+  }
+
+  &--back{
+    transform: rotateY(180deg);
+
+  &-1{
+    background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+    }
+  }
+  }
+ 
+  &:hover &__side--front{
+transform: rotateY(-180deg);
+
+  }
+  &:hover &__side--back{
+    transform: rotateY(0);
+    
+
+     }
+      //front side style
+      &__picture{
+      background-size: cover;
+      height:23rem;
+      background-blend-mode: screen;
+     -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%); 
+      clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      // -moz-background-blend-mode:screen;
+        &--1{
+        background-image:linear-gradient(to right bottom,
+         $color-secondary-light,
+         $color-secondary-dark), 
+         url(https://i.imgur.com/vmJ2lEN.jpg);
+
+        }
+        &--2{
+          background-image: url(https://i.imgur.com/vmJ2lEN.jpg);
+  
+          }
+          &--3{
+            background-image: url(https://i.imgur.com/vmJ2lEN.jpg);
+    
+            }
+      }
+      &__heading{
+      font-size:2.8rem;
+      font-weight:300;
+      text-transform:uppercase;
+      color:$color-white;
+      position:absolute;
+      top:12rem;
+      right:2rem;
+      }
+      &__heading-span{
+
+&--1{
+  
+}
+
+      }
+}
