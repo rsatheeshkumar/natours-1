@@ -12,8 +12,10 @@ $default-font-size: 1.6rem;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
-.btn:link,
-.btn:visited {
+.btn{
+	&,
+	&:link,
+	&:visited {
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 1.5rem 4rem;
@@ -22,6 +24,11 @@ $gutter-horizontal: 6rem;
 	transition: all 0.2s;
 	position: relative;
 	font-size: $default-font-size;
+
+	// change for <button> element
+	border:none;
+	cursor:pointer;
+	}
 	&:hover {
 		transform: translateY(-0.3rem);
 		box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -30,9 +37,11 @@ $gutter-horizontal: 6rem;
 			opacity: 0;
 		}
 	}
-	&:active {
+	&:active,
+	&:focus {
 		transform: translateY(-0.1rem);
 		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+		outline: none;
 	}
 }
 
